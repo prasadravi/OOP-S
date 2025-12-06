@@ -2,8 +2,8 @@
 using namespace std;
 void print1(int n){//Square of Stars
     for(int i=0;i<n;i++){
-        for(int j=0;j<n;j++){
-            cout<<"*";
+        for(int  j=0;j<n;j++){
+            cout<<"* ";
         }
         cout<<endl;
     }
@@ -83,8 +83,8 @@ void print8(int n){//Diamond-like pattern without spaces (or) just top and botto
     for(int i=1;i<=2*n-1;i++){
         int stars=i;
         if(i>n)stars=2*n-i;
-    for(int j=1;j<=stars;j++){
-        cout<<"*";
+            for(int j=1;j<=stars;j++){
+                cout<<"*";
 
         }
         cout<<endl;
@@ -104,15 +104,38 @@ void print9(int n){//alternates between 1 and 0, so it’s a binary sequence.
 
     }
 }
+void print10(int n){//“Number Double Pyramid”
+    int space=2*(n-1);
+    for(int i=1;i<=n;i++){
+        //numbers
+        for(int j=1;j<=i;j++){
+            cout<<j;
+        }
+        //space
+        for(int j=1;j<=space;j++){
+            cout<<" ";
 
+        }
+        //space
+        for(int j=i;j>=1;j--){
+            cout<<j;
+        
+        
+        }
+        cout<<endl;
+        space -=2;
+
+    }
+
+}
 
 
 
 
 int main(){
-    int n = 5;
+    int  n ;
     cin>>n;
-    print9(n);
+    print2(n);
     //print6(n);
     return 0;
 
