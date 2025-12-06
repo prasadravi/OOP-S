@@ -1,5 +1,5 @@
-
 import java.util.Scanner;
+
 public class window {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
@@ -13,7 +13,7 @@ public class window {
 
         int ans = 0;
 
-        
+        // Check window condition (i, i+1, i+2)
         for (int i = 0; i < n - 2; i++) {
             if (arr[i] + arr[i + 2] == arr[i + 1]) {
                 ans++;
@@ -22,7 +22,5 @@ public class window {
 
         System.out.println("Window number: " + ans);
     }
-}
-
     
-
+}
